@@ -36,9 +36,13 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue
          
       ),
-      initialRoute: "/",
-      getPages: RoutePages.lsit,
+      // initialRoute: "/",
+      // getPages: RoutePages.lsit,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      //路由
+      initialRoute: RouteNames.systemSplash,
+      getPages: RoutePages.lsit,
+      navigatorObservers: [RoutePages.observer],
     );
   }
 }
