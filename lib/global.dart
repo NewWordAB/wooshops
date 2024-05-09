@@ -11,14 +11,19 @@ class Global{
 
 
 
-    await Future.wait([
-      Get.putAsync<CoinfigService>(() async => await CoinfigService().init()),
+    // await Future.wait([
+    //   Get.putAsync<CoinfigService>(() async => await CoinfigService().init()),
 
-    ]).whenComplete(() {
+    // ]).whenComplete(() {
 
-    });
+    // });
 
 
     await Storage().init();
+
+     // 初始化服务
+    
+    Get.put<WPHttpService>(WPHttpService());
+    
   }
 }
