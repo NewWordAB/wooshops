@@ -20,20 +20,17 @@ class WPHttpService extends GetxService {
   @override
   void onInit() {
     super.onInit();
-
-    // 初始 dio
+  // 初始 dio
     var options = BaseOptions(
       baseUrl: Constants.wpApiBaseUrl,
-      
-      connectTimeout:   200.milliseconds, // 10秒
-      receiveTimeout: 5.milliseconds,//5000, // 5秒
+      connectTimeout: const Duration(seconds: 10), // 10000, // 10秒
+      receiveTimeout: const Duration(seconds: 5), // 5000, // 5秒
       headers: {},
       contentType: 'application/json; charset=utf-8',
       responseType: ResponseType.json,
     );
-    _dio = Dio(options);
 
-    
+    _dio = Dio(options); 
 
     // 拦截器
     _dio.interceptors.add(RequestInterceptors());
@@ -132,23 +129,22 @@ class RequestInterceptors extends Interceptor {
     // 这样请求将被中止并触发异常，上层catchError会被调用。
   }
 
-  // @override
-  // void onResponse(Response response, ResponseInterceptorHandler handler) {
-  //   // 200 请求成功, 201 添加成功
-  //   if (response.statusCode != 200 && response.statusCode != 201) {
-  //     handler.reject(
-  //       // ignore: deprecated_member_use
-  //       DioError(
-  //         requestOptions: response.requestOptions,
-  //         response: response,
-  //         // ignore: deprecated_member_use
-  //         type: DioErrorType.response,
-  //       ),
-  //       true,
-  //     );
-  //   } else {
-  //     handler.next(response);
-  //   }
+//  @override
+//   void onResponse(Response response, ResponseInterceptorHandler handler) {
+//     // 200 请求成功, 201 添加成功
+//     if (response.statusCode != 200 && response.statusCode != 201) {
+//       handler.reject(
+//         DioError(
+//           requestOptions: response.requestOptions,
+//           response: response,
+//           type: DioErrorType.badResponse,
+//         ),
+//         true,
+//       );
+//     } else {
+//       handler.next(response);
+//     }
+//   }
   // }
 
  
