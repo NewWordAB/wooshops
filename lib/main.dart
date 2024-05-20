@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart'; 
 import 'package:wooshops/common/index.dart';
 
@@ -13,7 +14,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+  return ScreenUtilInit(
+    designSize: const Size(414, 896),
+    splitScreenMode: false,
+    minTextAdapt: false,
+
+    builder: (context, child){
+       return GetMaterialApp(
       title: 'Flutter Demo',
       theme:ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
      
@@ -33,7 +40,21 @@ class MyApp extends StatelessWidget {
       // locale: ConfigService.to.locale, // 当前语言种类
       // fallbackLocale: Translation.fallbackLocale, // 默认语言种类
 
+       builder: (context, widget){
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(textScaler: TextScaler.linear(1.0) ),
+          child: widget!
+          );
+
+       },
+       debugShowCheckedModeBanner: false,
+
     );
+    },
+
+  );
+
+   
   }
 }
 
