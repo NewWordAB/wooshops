@@ -4,8 +4,7 @@ import 'package:get/route_manager.dart';
 import 'package:wooshops/common/routers/index.dart';
 import 'package:wooshops/pages/system/login/index.dart';
 import 'package:wooshops/pages/system/splash/index.dart';
-import '../../pages/index.dart';
-import 'index.dart';
+import '../../pages/index.dart'; 
 
 class RoutePages {
   static final RouteObserver<Route> observer = RouteObserver();
@@ -18,7 +17,7 @@ class RoutePages {
     binding:LoginBinding(),
     ),
     GetPage(
-    name: "/splash", 
+    name: RouteNames.systemSplash, 
     page: () => const SplashPage(),
     ),
 

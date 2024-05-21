@@ -1,3 +1,4 @@
 library widgets;
 
-// export './xxxx.dart';
+export './image.dart';
+export './icon.dart';

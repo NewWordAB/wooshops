@@ -7,7 +7,7 @@ class Storage{
   static final Storage _instance = Storage._internal();
   factory Storage() => _instance;
   late final SharedPreferences _prefs;
-
+  
   Storage._internal();
  
   Future<void>init() async{

@@ -22,14 +22,14 @@ class MyApp extends StatelessWidget {
     builder: (context, child){
        return GetMaterialApp(
       title: 'Flutter Demo',
-      theme:ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
+      // theme:ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
      
       // initialRoute: "/",
       // getPages: RoutePages.lsit,
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
 
       //路由
-      initialRoute: RouteNames.stylesStylesIndex,
+      initialRoute: RouteNames.systemSplash,
       getPages: RoutePages.lsit,
       navigatorObservers: [RoutePages.observer],
         

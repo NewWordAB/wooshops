@@ -43,6 +43,7 @@ dependencies:
   package_info_plus: ^8.0.0
   dio: ^5.4.3+1
   flutter_screenutil: ^5.9.1
+  flutter_native_splash: ^2.2.16
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,9 @@ dev_dependencies:
  
   
   # flutter_launcher_icons: "^0.13.1"
-
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/icons/launcher_android.png"
 
    # app 图标
 flutter_icons:
