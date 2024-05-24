@@ -12,9 +12,11 @@ class StylesIndexPage extends GetView<StylesIndexController> {
     return ListView(
       children:[
         ListTile(
-          onTap: controller.onThemeSelected,
-          title:
-              Text("主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
+          onTap: () => Get.toNamed(RouteNames.stylesStylesIndex),
+          title: const Text("Text 文本"),
+          // onTap: controller.onThemeSelected,
+          // title:
+          //     Text("主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
         ),
       ],
     );

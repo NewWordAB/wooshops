@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart'; 
 import 'package:wooshops/common/index.dart';
-
+import 'global.dart';
  
-void main() {
+Future<void> main() async {
+  // await Global.init();
   runApp(const MyApp());
 }
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
 
       //路由
-      initialRoute: RouteNames.systemSplash,
+      initialRoute: RouteNames.stylesText,
       getPages: RoutePages.lsit,
       navigatorObservers: [RoutePages.observer],
         

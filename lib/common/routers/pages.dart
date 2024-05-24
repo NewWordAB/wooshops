@@ -1,9 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:wooshops/common/routers/index.dart';
-import 'package:wooshops/pages/system/login/index.dart';
-import 'package:wooshops/pages/system/splash/index.dart';
+import 'package:wooshops/common/routers/index.dart'; 
 import '../../pages/index.dart'; 
 
 class RoutePages {
@@ -19,6 +17,10 @@ class RoutePages {
     GetPage(
     name: RouteNames.systemSplash, 
     page: () => const SplashPage(),
+    ),
+      GetPage(
+    name: RouteNames.stylesText, 
+    page: () => const TextPage(),
     ),
 
       GetPage(

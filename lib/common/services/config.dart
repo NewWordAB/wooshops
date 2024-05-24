@@ -9,6 +9,8 @@ import 'package:wooshops/common/index.dart';
 class ConfigService extends GetxService {
   // 这是一个单例写法
   static ConfigService get to => Get.put(ConfigService());
+ // 这是一个单例写法
+  // static ConfigService get to => Get.find();
 
   PackageInfo? _platform;
   String get version => _platform?.version ?? '-';
@@ -21,7 +23,7 @@ class ConfigService extends GetxService {
   bool get isDarkModel => _isDarkModel.value;
 
   // 是否首次打开
-  // bool get isAlreadyOpen => Storage().getBool(Constants.storageAlreadyOpen);
+  bool get isAlreadyOpen => Storage().getBool(Constants.storageAlreadyOpen);
 
   @override
   void onInit() {
@@ -42,7 +44,7 @@ class ConfigService extends GetxService {
 
   // 标记已打开app
   void setAlreadyOpen() {
-    // Storage().setBool(Constants.storageAlreadyOpen, true);
+    Storage().setBool(Constants.storageAlreadyOpen, true);
   }
 
   // 切换 theme

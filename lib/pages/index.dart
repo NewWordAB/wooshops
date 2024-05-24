@@ -25,3 +25,5 @@ export 'system/register/index.dart';
 export 'system/register_pin/index.dart';
 export 'system/splash/index.dart';
 export 'system/user_agreement/index.dart';
+export 'styles/styles_index/index.dart';
+export 'styles/text/index.dart';

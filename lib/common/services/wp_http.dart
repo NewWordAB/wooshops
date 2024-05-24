@@ -129,24 +129,23 @@ class RequestInterceptors extends Interceptor {
     // 这样请求将被中止并触发异常，上层catchError会被调用。
   }
 
-//  @override
-//   void onResponse(Response response, ResponseInterceptorHandler handler) {
-//     // 200 请求成功, 201 添加成功
-//     if (response.statusCode != 200 && response.statusCode != 201) {
-//       handler.reject(
-//         DioError(
-//           requestOptions: response.requestOptions,
-//           response: response,
-//           type: DioErrorType.badResponse,
-//         ),
-//         true,
-//       );
-//     } else {
-//       handler.next(response);
-//     }
-//   }
-  // }
-
+ @override
+  void onResponse( response, ResponseInterceptorHandler handler) {
+    // 200 请求成功, 201 添加成功
+    if (response.statusCode != 200 && response.statusCode != 201) {
+      handler.reject(
+        DioError(
+          requestOptions: response.requestOptions,
+          response: response,
+          type: DioErrorType.badResponse,
+        ),
+        true,
+      );
+    } else {
+      handler.next(response);
+    }
+  }
+  
  
 
   /// 退出并重新登录

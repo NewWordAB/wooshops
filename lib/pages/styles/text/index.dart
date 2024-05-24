@@ -1,5 +1,4 @@
-library styles_index;
+library text;
 
 export './controller.dart';
 export './view.dart';
-export '';
