@@ -60,12 +60,28 @@
         page: () => const ThemePage(),
       ),
       GetPage(
+        name: RouteNames.pages,
+        page: () => const PagesPage(),
+      ),
+      GetPage(
         name: RouteNames.searchSearchFilter,
         page: () => const SearchFilterPage(),
       ),
       GetPage(
         name: RouteNames.searchSearchIndex,
         page: () => const SearchIndexPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesIcon,
+        page: () => const IconPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesStylesIndex,
+        page: () => const StylesIndexPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesText,
+        page: () => const TextPage(),
       ),
       GetPage(
         name: RouteNames.systemWelcome,

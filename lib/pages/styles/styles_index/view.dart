@@ -13,8 +13,8 @@ class StylesIndexPage extends GetView<StylesIndexController> {
       children:[
         ListTile(
           onTap: () => Get.toNamed(RouteNames.stylesStylesIndex),
-          title: const Text("Text 文本"),
-          // onTap: controller.onThemeSelected,
+          title: const Text("Icon 图标"),
+          
           // title:
           //     Text("主题 : ${ConfigService.to.isDarkModel ? "Dark" : "Light"}"),
         ),

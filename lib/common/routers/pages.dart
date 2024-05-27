@@ -14,20 +14,8 @@ class RoutePages {
     page: () => const LoginPage(),
     binding:LoginBinding(),
     ),
-    GetPage(
-    name: RouteNames.systemSplash, 
-    page: () => const SplashPage(),
-    ),
-      GetPage(
-    name: RouteNames.stylesText, 
-    page: () => const TextPage(),
-    ),
-
-      GetPage(
-        name: RouteNames.mainPage,
-        page: () => const MainPage(),
-      ),
-      GetPage(
+   
+   GetPage(
         name: RouteNames.cartApplyPromoCode,
         page: () => const ApplyPromoCodePage(),
       ),
@@ -54,6 +42,10 @@ class RoutePages {
       GetPage(
         name: RouteNames.goodsProductList,
         page: () => const ProductListPage(),
+      ),
+      GetPage(
+        name: RouteNames.main,
+        page: () => const MainPage(),
       ),
       GetPage(
         name: RouteNames.myLanguage,
@@ -83,6 +75,7 @@ class RoutePages {
         name: RouteNames.myTheme,
         page: () => const ThemePage(),
       ),
+     
       GetPage(
         name: RouteNames.searchSearchFilter,
         page: () => const SearchFilterPage(),
@@ -90,6 +83,18 @@ class RoutePages {
       GetPage(
         name: RouteNames.searchSearchIndex,
         page: () => const SearchIndexPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesIcon,
+        page: () => const IconPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesStylesIndex,
+        page: () => const StylesIndexPage(),
+      ),
+      GetPage(
+        name: RouteNames.stylesText,
+        page: () => const TextPage(),
       ),
       GetPage(
         name: RouteNames.systemWelcome,
@@ -107,7 +112,10 @@ class RoutePages {
         name: RouteNames.systemRegisterPin,
         page: () => const RegisterPinPage(),
       ),
-     
+      GetPage(
+        name: RouteNames.systemSplash,
+        page: () => const SplashPage(),
+      ),
       GetPage(
         name: RouteNames.systemUserAgreement,
         page: () => const UserAgreementPage(),
