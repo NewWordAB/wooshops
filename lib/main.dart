@@ -5,7 +5,7 @@ import 'package:wooshops/common/index.dart';
 import 'global.dart';
  
 Future<void> main() async {
-  // await Global.init();
+  await Global.init();
   runApp(const MyApp());
 }
 

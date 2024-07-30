@@ -8,8 +8,8 @@ import 'common/index.dart';
 
 class Global{
   static Future<void>init() async{
-    // WidgetsFlutterBinding.ensureInitialized();
-      WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+    WidgetsFlutterBinding.ensureInitialized();
+      // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
 
